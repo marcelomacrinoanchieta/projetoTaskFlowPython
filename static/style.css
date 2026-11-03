@@ -1,0 +1,66 @@
+/* TaskFlow - visual */
+:root{--bg:#f4f5f7;--card:#fff;--ink:#1f2328;--muted:#6b7280;--line:#e3e5e8;
+--blue:#3b5bdb;--sql:#1971c2;--mongo:#2f9e44;--red:#e03131;--dark:#1d2026}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:15px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{background:var(--dark);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:10px 24px}
+.top .brand{color:#fff;font-weight:700;font-size:18px}
+.top .brand::before{content:"▦ "}
+.legend{font-size:13px}
+main{max-width:1100px;margin:0 auto;padding:20px 24px 60px}
+h1{font-size:24px;margin:8px 0}
+h2{font-size:18px;margin:24px 0 10px}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;border-radius:10px;padding:2px 8px;vertical-align:middle}
+.tag.sql{background:var(--sql)}
+.tag.mongo{background:var(--mongo)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.row.between{justify-content:space-between}
+.btn{background:var(--blue);color:#fff;border:1px solid var(--blue);border-radius:6px;padding:7px 14px;font-size:14px;cursor:pointer;display:inline-block}
+.btn:hover{text-decoration:none;filter:brightness(1.1)}
+.btn.ghost{background:#fff;color:var(--blue)}
+.btn.danger{background:var(--red);border-color:var(--red)}
+.link{background:none;border:none;cursor:pointer;padding:0;font-size:13px}
+.danger-text{color:var(--red)}
+.flash{padding:10px 14px;border-radius:6px;margin-bottom:12px}
+.flash.ok{background:#d3f9d8;color:#2b8a3e}
+.flash.error{background:#ffe3e3;color:#c92a2a}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card,.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;color:var(--ink)}
+.panel{margin-top:16px}
+.card:hover{border-color:var(--blue);text-decoration:none}
+.card h3{margin:4px 0}
+.key{font-weight:800;color:var(--blue)}
+.bar{background:var(--line);height:8px;border-radius:4px;overflow:hidden;margin:8px 0 4px}
+.bar div{background:var(--mongo);height:100%}
+.form{display:flex;flex-direction:column;gap:12px;max-width:640px}
+.form label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:14px}
+input,textarea,select{font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:#fff}
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.col{background:#e9ecef;border-radius:10px;padding:10px;min-height:120px}
+.col h4{display:flex;justify-content:space-between;margin:0 0 8px;font-size:13px}
+.issue-card{background:#fff;border-radius:8px;padding:8px 10px;margin-bottom:8px;border-left:4px solid var(--muted);font-size:13px}
+.issue-card.t-bug{border-left-color:var(--red)}
+.issue-card.t-feature{border-left-color:var(--mongo)}
+.issue-card.t-task{border-left-color:var(--sql)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:4px 0}
+.meta.big{font-size:14px}
+.prio{font-weight:700}
+.p1{color:var(--red)} .p2{color:#e8590c}
+.move button{font-size:11px;background:#fff;border:1px solid var(--line);border-radius:4px;cursor:pointer;padding:1px 5px}
+.filters{margin:16px 0}
+.filters input{flex:1}
+.status{padding:2px 8px;border-radius:8px;background:#fff3bf}
+.s-done{background:#d3f9d8}.s-review{background:#e5dbff}.s-todo{background:#e9ecef}
+.two{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+@media (max-width:800px){.two{grid-template-columns:1fr}}
+.comment{border-top:1px solid var(--line);padding:10px 0}
+.chip{display:inline-block;background:#e7f5ff;color:var(--sql);border-radius:8px;padding:1px 7px;font-size:12px;margin-right:4px}
+.react{background:#fff;border:1px solid var(--line);border-radius:12px;cursor:pointer;padding:1px 8px}
+.raw summary{font-size:12px;color:var(--muted);cursor:pointer}
+.raw pre{background:#f8f9fa;padding:8px;border-radius:6px;font-size:12px;overflow:auto}
+.timeline{list-style:none;padding:0;margin:0}
+.timeline li{border-bottom:1px solid var(--line);padding:8px 0;font-size:13px}

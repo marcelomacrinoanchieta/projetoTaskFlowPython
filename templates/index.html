@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Projetos</h1>
+<ul>
+  {% for p in projetos %}
+    {% if p %}
+      <li>{{ p }}</li>
+    {% else %}
+      <li>Sem projetos cadastrados</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endblock %}
